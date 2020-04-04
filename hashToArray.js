@@ -26,6 +26,3 @@ const hashToArray = function convertHashToArray(hash) {
   return resultArray;
   
 }
-
-
-hashToArray({name: 'Jeremy', age: 24, role: 'Software Engineer'});
