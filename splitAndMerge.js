@@ -1,13 +1,21 @@
 const splitAndMerge = function splitStringBySeparator(str, sp) {
-    let workString = str; //function is immutable
 
-    workString = workString.split(' '); //splitting the string into words
+  // function is immutable  
+  let workString = str;
 
-    for(let i = 0; i < workString.length; i++){
-        workString[i] = workString[i].split('').join(sp); //splitting each word into chars and then merging them with specified separator
-    } 
+  // splitting the string into words
+  workString = workString.split(' ');
 
-    workString = workString.join(' '); //merging resulting string
+  for(let i = 0; i < workString.length; i++){
 
-    return workString;
+    // splitting each word into chars and then merging them with specified separator
+    workString[i] = workString[i].split('').join(sp);
+
+  } 
+
+  // merging resulting string
+  workString = workString.join(' ');
+
+  return workString;
+  
 } 
