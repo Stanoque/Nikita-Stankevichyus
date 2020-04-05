@@ -36,9 +36,9 @@ const sum = function sumOfArbitraryArguments(arg){
       // one parameter less to process
       arg.length--;
 
-      // summing current parameter and sending the rest (with corrected length property) up in the recursion
+      // summing current parameter and sending the rest (with corrected length property) down in the recursion
       return arg[currentIndex] + sum(arg);
-      
+
     }
   }
 }
