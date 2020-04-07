@@ -1,3 +1,5 @@
+"use strict";
+
 var splitAndMerge = function splitStringBySeparator(str, sp) {
 
   // function is immutable  

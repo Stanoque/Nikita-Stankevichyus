@@ -1,3 +1,5 @@
+"use strict";
+
 var hashToArray = function convertHashToArray(hash) {
 
   // function is immutable
@@ -26,4 +28,3 @@ var hashToArray = function convertHashToArray(hash) {
   return resultArray;
   
 }
-

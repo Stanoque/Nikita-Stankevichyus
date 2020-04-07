@@ -1,3 +1,5 @@
+"use strict";
+
 /*
 * I have a feeling that this function neglect a lot of exceptions and potential errors.
 * Which is confirmed by seemingly complex polyfill of the 'bind' method at MDN.
@@ -22,4 +24,3 @@ Function.prototype.myBind = function bindPolyfill(context) {
     currentFunction.apply(context, preArguments.concat(callArguments));
   }
 }
-

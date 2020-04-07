@@ -1,3 +1,5 @@
+"use strict";
+
 var stringReverse = function reverseEachWord(sentence) {
 
 
@@ -52,4 +54,5 @@ var stringReverse = function reverseEachWord(sentence) {
   workString = workString.join(' ');
 
   return workString;
+
 }

@@ -1,3 +1,5 @@
+"use strict";
+
 /*
 * The function is crying for refactoring, but this is the best I could come up with.
 * -------------------------------------------------------------------------------------------------------------------------------

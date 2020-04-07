@@ -1,3 +1,5 @@
+"use strict";
+
 var stringExpansion = function multiplyLettersByNumeric(string) {
 
   // function is immutable
@@ -36,4 +38,5 @@ var stringExpansion = function multiplyLettersByNumeric(string) {
   }
 
   return resultString;
+
 }

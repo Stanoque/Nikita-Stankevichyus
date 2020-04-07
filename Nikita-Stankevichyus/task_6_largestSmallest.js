@@ -1,3 +1,4 @@
+"use strict";
 
 // this function converts arguments array-like object into actual array
 var argsIntoArray = function convertArgumentsIntoArray(args) {

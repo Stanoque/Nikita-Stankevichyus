@@ -1,3 +1,5 @@
+"use strict";
+
 var countDown = function countingTillZeroWithDelay(number) {
   
   // function is immutable
