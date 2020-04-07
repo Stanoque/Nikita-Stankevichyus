@@ -7,18 +7,19 @@
 Function.prototype.myBind = function bindPolyfill(context) {
   
   // remembering which function is being binded
-  let currentFunction = this;
+  var currentFunction = this;
 
   // arguments passed to 'myBind' method, expect for context object
-  let preArguments = [].slice.call(arguments, 1);
+  var preArguments = [].slice.call(arguments, 1);
 
   // resulting function
   return function() {
 
     // arguments passed during actual call of the resulting function
-    let callArguments = [].slice.call(arguments);
+    var callArguments = [].slice.call(arguments);
 
     // using apply to emulate 'bind' method
     currentFunction.apply(context, preArguments.concat(callArguments));
   }
 }
+

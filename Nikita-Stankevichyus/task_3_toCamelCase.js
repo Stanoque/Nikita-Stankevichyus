@@ -1,18 +1,18 @@
-const toCamelCase = function dashedUnderscoredToCamelCase(string) {
+var toCamelCase = function dashedUnderscoredToCamelCase(string) {
 
   // function is immutable
-  let workString = string;
+  var workString = string;
 
 
   // regular expression to find dash and underscore in the string
-  const dashUnderscoreRegExp = /_|-/g;
+  var dashUnderscoreRegExp = /_|-/g;
 
 
   // replacing all the dashes and underscores with space to utilize separators
   workString = workString.replace(dashUnderscoreRegExp, ' ');
   workString = workString.split(' ');
 
-  for(let i = 1; i < workString.length; i++) {
+  for(var i = 1; i < workString.length; i++) {
 
     /*
     * Firstly: we ignore the first word

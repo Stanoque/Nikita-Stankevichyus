@@ -1,15 +1,15 @@
-const hashToArray = function convertHashToArray(hash) {
+var hashToArray = function convertHashToArray(hash) {
 
   // function is immutable
-  let workHash = hash;
+  var workHash = hash;
   
-  const ownProps = Object.getOwnPropertyNames(workHash);
+  var ownProps = Object.getOwnPropertyNames(workHash);
   
   // we know for sure how many elements the result array will contain
-  const resultArray = new Array(ownProps.length);
+  var resultArray = new Array(ownProps.length);
 
 
-  for(let i = 0; i < ownProps.length; i++) {
+  for(var i = 0; i < ownProps.length; i++) {
     
     // first evaluate an element of the array as array itself
     resultArray[i] = [];
@@ -26,3 +26,4 @@ const hashToArray = function convertHashToArray(hash) {
   return resultArray;
   
 }
+

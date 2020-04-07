@@ -1,18 +1,21 @@
-const stringExpansion = function multiplyLettersByNumeric(string) {
+var stringExpansion = function multiplyLettersByNumeric(string) {
 
   // function is immutable
-  let workString = string;
+  var workString = string;
+
+  // if string is empty return null
+  if(!string){return null;};
 
   // regexp that matches pairs of number-letter and lone letters, but don't match lone numbers
-  const splitRegExp = /\d(?=\D)\D|(?<!\d)\D/g;
+  var splitRegExp = /\d(?=\D)\D|(?<!\d)\D/g;
 
   // string to return
-  let resultString = '';
+  var resultString = '';
 
   // splitting the string into array of pairs and lone letters, abandoning "stray" numericals
   workString = workString.match(splitRegExp);
 
-  for(let i = 0; i < workString.length; i++) {
+  for(var i = 0; i < workString.length; i++) {
     
     
     if(workString[i].length > 1) {

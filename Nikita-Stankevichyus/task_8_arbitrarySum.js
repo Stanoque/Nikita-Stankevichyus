@@ -6,7 +6,7 @@
 * While this "arg" remains absolute, thus making the recursion valid.
 */
 
-const sum = function sumOfArbitraryArguments(arg){
+var sum = function sumOfArbitraryArguments(arg){
 
   // if there are no arguments, return null.
   if(arg === undefined){
@@ -31,7 +31,7 @@ const sum = function sumOfArbitraryArguments(arg){
     } else {
       
       // "remembering" current parameter's index
-      let currentIndex = arg.length-1;
+      var currentIndex = arg.length-1;
 
       // one parameter less to process
       arg.length--;

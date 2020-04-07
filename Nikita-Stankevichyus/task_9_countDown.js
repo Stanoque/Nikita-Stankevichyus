@@ -1,7 +1,7 @@
-const countDown = function countingTillZeroWithDelay(number) {
+var countDown = function countingTillZeroWithDelay(number) {
   
   // function is immutable
-  let workNumber = number;
+  var workNumber = number;
 
   // if number is larger than 0, procceed as usual.
   if(workNumber > 0) {
