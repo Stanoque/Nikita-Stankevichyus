@@ -1,5 +1,25 @@
 "use strict";
 
+// ES5 polyfill of "repeat" method of ES6
+
+String.prototype.myRepeat = function repeatPolyfill(times) {
+
+  // function is immutable
+  var workChar = this;
+
+  // string to return
+  var resultString = '';
+
+  // times is how many repeats we want
+  for (var i = 0; i < times; i++) {
+    resultString = resultString.concat(workChar);
+  }
+
+  return resultString;
+};
+
+
+
 var stringExpansion = function multiplyLettersByNumeric(string) {
 
   // function is immutable
@@ -26,10 +46,10 @@ var stringExpansion = function multiplyLettersByNumeric(string) {
     * If there is more than one char in the element of the array
     * We take the char at second position of the pair (index 1)
     * While parsing the first one (index 0) as integer
-    * And then we create a string of repeating second-position chars via "repeat" method 
+    * And then we create a string of repeating second-position chars via 'myRepeat' method-polyfill
     * Finally we concat this string with our resulting string
     */
-      resultString = resultString.concat(workString[i].charAt(1).repeat(parseInt(workString[i].charAt(0), 10)));
+      resultString = resultString.concat(workString[i].charAt(1).myRepeat(parseInt(workString[i].charAt(0))));
     } else {
 
       // if there is only one char, we just concat it with the resulting string
@@ -40,3 +60,4 @@ var stringExpansion = function multiplyLettersByNumeric(string) {
   return resultString;
 
 }
+
