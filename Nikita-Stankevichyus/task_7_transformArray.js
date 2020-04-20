@@ -1,6 +1,6 @@
 "use strict";
 
-var transform = function trasformArrayIntoFunctionArray(baseArray) {
+function transform(baseArray) {
 
   // via map method we're forming a new array, containing function, that return respective elements from the original array
   var resultArray = baseArray.map(

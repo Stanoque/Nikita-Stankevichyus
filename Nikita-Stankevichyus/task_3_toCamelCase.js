@@ -1,6 +1,6 @@
 "use strict";
 
-var toCamelCase = function dashedUnderscoredToCamelCase(string) {
+function toCamelCase(string) {
 
   // function is immutable
   var workString = string;

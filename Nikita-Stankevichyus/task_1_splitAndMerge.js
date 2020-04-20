@@ -1,6 +1,6 @@
 "use strict";
 
-var splitAndMerge = function splitStringBySeparator(str, sp) {
+function splitAndMerge(str, sp) {
 
   // function is immutable  
   var workString = str;

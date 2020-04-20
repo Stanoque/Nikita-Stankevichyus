@@ -2,7 +2,7 @@
 
 // ES5 polyfill of "repeat" method of ES6
 
-String.prototype.myRepeat = function repeatPolyfill(times) {
+String.prototype.myRepeat = function(times) {
 
   // function is immutable
   var workChar = this;
@@ -20,7 +20,7 @@ String.prototype.myRepeat = function repeatPolyfill(times) {
 
 
 
-var stringExpansion = function multiplyLettersByNumeric(string) {
+function stringExpansion(string) {
 
   // function is immutable
   var workString = string;
@@ -60,4 +60,3 @@ var stringExpansion = function multiplyLettersByNumeric(string) {
   return resultString;
 
 }
-

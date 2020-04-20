@@ -1,10 +1,10 @@
 "use strict";
 
-var stringReverse = function reverseEachWord(sentence) {
+function stringReverse(sentence) {
 
 
   // function which reverses a word
-  var reverseWord = function reverseWord(word) {
+  function reverseWord(word) {
 
     // function is immutable
     var workWord = word;
@@ -12,15 +12,8 @@ var stringReverse = function reverseEachWord(sentence) {
     // arrays are easier to manipulate
     workWord = workWord.split('');
 
-    // swapping letters until middle of the word
-    for(var i = 0; i < Math.floor(workWord.length/2); i++) {
-      var swap;
-
-      swap = workWord[i];
-      workWord[i] = workWord[workWord.length - i - 1];
-      workWord[workWord.length - i - 1] = swap;
-
-    }
+    // reversing word
+    workWord.reverse();
 
     // mergin word back to string
     workWord = workWord.join('');

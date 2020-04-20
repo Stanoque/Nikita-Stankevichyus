@@ -1,6 +1,6 @@
 "use strict";
 
-var countDown = function countingTillZeroWithDelay(number) {
+function countDown(number) {
   
   // function is immutable
   var workNumber = number;

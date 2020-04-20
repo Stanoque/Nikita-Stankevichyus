@@ -1,6 +1,6 @@
 "use strict";
 
-var hashToArray = function convertHashToArray(hash) {
+function hashToArray(hash) {
 
   // function is immutable
   var workHash = hash;
@@ -13,14 +13,8 @@ var hashToArray = function convertHashToArray(hash) {
 
   for(var i = 0; i < ownProps.length; i++) {
     
-    // first evaluate an element of the array as array itself
-    resultArray[i] = [];
-
-    // the first is the key
-    resultArray[i][0] = ownProps[i];
-
-    // the second is the value
-    resultArray[i][1] = workHash[ownProps[i]]; 
+    // the first is the key, the second is the value
+    resultArray.push([ownProps[i], workHash[ownProps[i]]]);
 
   }
 

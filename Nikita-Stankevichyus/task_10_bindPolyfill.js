@@ -6,7 +6,7 @@
 * But nevertheless this prototype method got through my tests, so I call it functional.
 */
 
-Function.prototype.myBind = function bindPolyfill(context) {
+Function.prototype.myBind = function(context) {
   
   // remembering which function is being binded
   var currentFunction = this;

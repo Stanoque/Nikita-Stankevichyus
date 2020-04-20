@@ -1,25 +1,30 @@
 "use strict";
 
+/*
+*  NOTE: Now more concise embedded functionality used to turn arguments into array
+*  Function below isn't used
+*/
+
 // this function converts arguments array-like object into actual array
-var argsIntoArray = function convertArgumentsIntoArray(args) {
+// var argsIntoArray = function(args) {
 
-  var argsArray = [];
+//   var argsArray = [];
 
-  for(var i = 0; i < args.length; i++) {
-    argsArray.push(args[i]);
-  }
+//   for(var i = 0; i < args.length; i++) {
+//     argsArray.push(args[i]);
+//   }
 
-  return argsArray;
-}
+//   return argsArray;
+// }
 
 
-var largest = function maxNumberAmongArgs() {
+function largest() {
 
   // if there are no arguments, the function will return "null"
   if (arguments.length !== 0) {
 
     // converting arguments object into array, so "reduce" method can be applied to it
-    var argsArray = argsIntoArray(arguments);
+    var argsArray = [].slice.call(arguments);;
 
     // via reduce finding maximum element outta array
     var maximum = argsArray.reduce(function(element_1, element_2){
@@ -33,13 +38,13 @@ var largest = function maxNumberAmongArgs() {
   }
 }
 
-var smallest = function minNumberAmongArgs() {
+function smallest() {
 
   // if there are no arguments, the function will return "null"
   if (arguments.length !== 0) {
 
     // converting arguments object into array, so "reduce" method can be applied to it
-    var argsArray = argsIntoArray(arguments);
+    var argsArray = [].slice.call(arguments);;
 
     // via reduce finding minimum element outta array
     var minimum = argsArray.reduce(function(element_1, element_2){

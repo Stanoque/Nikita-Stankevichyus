@@ -8,7 +8,7 @@
 * While this "arg" remains absolute, thus making the recursion valid.
 */
 
-var sum = function sumOfArbitraryArguments(arg){
+function sum(arg){
 
   // if there are no arguments, return null.
   if(arg === undefined){
